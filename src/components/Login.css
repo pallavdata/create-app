@@ -14,7 +14,7 @@
   body{
     background-color: #6A4FB3;
   }
-  form,form input::placeholder {
+  form,form input::placeholder,form>button>div {
     font-size: small;
   }
   a{
@@ -25,7 +25,15 @@
   .c-blue{
     color:#9b85d5;
   }
-  form>button{
+  form>.sign-btn{
     background-color: #6A4FB3 !important;
     color:white !important;
   }
+.App-logo{
+    height: 40px;
+    width: 40px;
+}
+button>div{
+    margin-top: auto;
+    margin-bottom: auto;
+}
