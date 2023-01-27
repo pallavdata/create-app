@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
+import Reset from "./components/Reset";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>}/>
           <Route path="/" element={<Login /> } />
           <Route path="/signup/" element={<SignUp />} />
+          <Route path="/Forget/" element={<Reset />} />
         </Routes>
       </UserAuthContextProvider>
     );

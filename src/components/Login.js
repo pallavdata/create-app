@@ -72,7 +72,7 @@ const Login = () => {
           ></input>
           <div className="d-flex justify-content-between mt-3 mb-3">
             <Link to="/SignUp">Create Account</Link>
-            <a href="#">Forgot Password?</a>
+            <Link to="/Forget">Forgot Password?</Link>
           </div>
           <button className="sign-btn p-2 w-100 btn">Sign in</button>
 
