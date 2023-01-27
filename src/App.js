@@ -14,8 +14,8 @@ class App extends Component {
     return (
       <UserAuthContextProvider>
         <Routes>
-          <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>}/>
-          <Route path="/" element={<Login /> } />
+          <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>}/>
+          <Route path="/Login/" element={<Login /> } />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="/Forget/" element={<Reset />} />
         </Routes>

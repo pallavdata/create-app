@@ -10,7 +10,7 @@ const Nav = () => {
         <div className="container-fluid">
         <Link className="navbar-brand" to="/home">News React</Link>
           <div onClick={logOut}>
-            <Link to="/">Logout</Link>
+            <Link to="/Login">Logout</Link>
           </div>
         </div>
       </nav>

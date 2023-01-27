@@ -16,7 +16,7 @@ const Reset = () => {
     setError("");
     try {
       await changePassword(email);
-      navigate("/");
+      navigate("/Login");
     } catch (err) {
       setError(err.message);
     }
@@ -40,7 +40,7 @@ const Reset = () => {
           ></input>
 
           <div className="d-flex justify-content-between mt-3 mb-3">
-            <Link to="/">Login Instead</Link>
+            <Link to="/Login">Login Instead</Link>
             <Link to="/SignUp">Sign Up Instead</Link>
           </div>
 

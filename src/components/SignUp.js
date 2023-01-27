@@ -17,7 +17,7 @@ const Signup = () => {
       setError("");
       try {
         await signUp(email, password);
-        navigate("/home");
+        navigate("/");
       } catch (err) {
         setError(err.message);
       }
@@ -49,7 +49,7 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <div className="mt-3 mb-3">
-            <Link to="/">Login Instead</Link>
+            <Link to="/Login">Login Instead</Link>
           </div>
           <button type="submit" className="sign-btn p-2 w-100 btn">Sign Up</button>
         </form>
