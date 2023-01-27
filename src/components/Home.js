@@ -8,8 +8,7 @@ const Home = () =>{
         let url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=07ffa0087c7949348a2daee28111bdaa"
         let data = await fetch(url);
         let jsonData = await data.json()
-        setArticles(jsonData.articles)
-        console.log("jsondata ".concat(jsonData.articles))
+        setArticles(jsonData.articles?jsonData.articles:"")
     }
     useEffect(() => {
         newsData(); 
