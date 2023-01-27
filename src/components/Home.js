@@ -9,6 +9,7 @@ const Home = () =>{
         let data = await fetch(url);
         let jsonData = await data.json()
         setArticles(jsonData.articles)
+        console.log(jsonData)
     }
     useEffect(() => {
         newsData(); 
@@ -18,7 +19,7 @@ const Home = () =>{
         <Nav/>
             <div className="container-fluid back-dark">
             <div className="row">
-                {articles.map((element) => {
+                {articles?.map((element) => {
                     return <div className="col-lg-4 col-md-6" key={element.url}>
                         <NewsItem title={element.title ? element.title : ""} description={element.description ? element.description : ""} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
                     </div>
