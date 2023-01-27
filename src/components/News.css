@@ -1,0 +1,17 @@
+.scale-custom{
+    top:200px;
+}
+.card-2{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top:-15px;
+    right:-15px;
+}
+.back-dark{
+    background-color: black;
+}
+.card{
+    background-color: black;
+    color:white;
+}

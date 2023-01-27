@@ -1,36 +1,39 @@
 import React, { useState } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import rocket from "./rocket.png";
 import { useUserAuth } from "../context/UserAuthContext";
 
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const { signUp } = useUserAuth();
-  const formSubmit = async (e) => {
-    e.preventDefault();
-    try{
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
+    const [password, setPassword] = useState("");
+    const { signUp } = useUserAuth();
+    let navigate = useNavigate();
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setError("");
+      try {
         await signUp(email, password);
-    }
-    catch(err){
+        navigate("/");
+      } catch (err) {
         setError(err.message);
-
-    }
-  };
+      }
+    };
   return (
     <div className="custom-container rounded-4">
       <img
         className="rounded-4"
-        src="https://i.ibb.co/QpWDj5r/rocket.png"
+        src={rocket}
         alt="rocket"
       />
       <div className="p-4">
         <div className="c-blue text-center">
           <b>Welcome to Bardeen</b>
         </div>
-        <form onSubmit={formSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="text-center mt-1 mb-4">
             Let's log in to lounch your automations.
           </div>
