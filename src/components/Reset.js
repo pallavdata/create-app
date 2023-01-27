@@ -23,7 +23,7 @@ const Reset = () => {
   };
   return (
     <div className="custom-container rounded-4">
-      <img className="rounded-4" src={rocket} alt="rocket" />
+      <img className="rounded-4" src={rocket} alt="rocket"/>
       <div className="p-4">
         <div className="c-blue text-center">
           <b>Welcome to Bardeen</b>
