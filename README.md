@@ -1,5 +1,5 @@
 <h1>The App is hosted on Netlify</h1>
-<a href="https://main--heroic-naiad-e0af41.netlify.app/Login">https://main--heroic-naiad-e0af41.netlify.app/Login</a>
+<a href="https://main--heroic-naiad-e0af41.netlify.app">https://main--heroic-naiad-e0af41.netlify.app</a>
 
 
 
